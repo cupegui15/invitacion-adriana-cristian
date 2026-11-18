@@ -1,6 +1,6 @@
 # Invitación de boda · Adriana & Cristian
 
-Invitación web estática, adaptable a computadores y celulares, preparada para publicarse gratis con GitHub Pages. No necesita instalar dependencias ni compilarse.
+Invitación web estática, en una sola columna centrada como la referencia y adaptable a computadores y celulares, preparada para publicarse gratis con GitHub Pages. No necesita instalar dependencias ni compilarse.
 
 ## Verla en tu computador
 
