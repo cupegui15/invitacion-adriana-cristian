@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 1400" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <pattern id="encaje" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M-19 19 19-19M0 38 38 0M19 57 57 19M-19 19 19 57M0 0 38 38M19-19 57 19"
+        fill="none" stroke="#99988f" stroke-width="5.2" stroke-opacity=".28" />
+      <path d="M-19 19 19-19M0 38 38 0M19 57 57 19M-19 19 19 57M0 0 38 38M19-19 57 19"
+        fill="none" stroke="#fffefa" stroke-width="3.1" stroke-opacity=".96" />
+    </pattern>
+    <filter id="sombra-encaje" x="-12%" y="-8%" width="124%" height="116%">
+      <feDropShadow dx="1" dy="4" stdDeviation="4" flood-color="#606055" flood-opacity=".22" />
+    </filter>
+    <mask id="marco-encaje" maskUnits="userSpaceOnUse" x="0" y="0" width="990" height="1400">
+      <rect x="112" y="10" width="766" height="920" rx="78" fill="#fff" />
+      <rect x="162" y="150" width="666" height="840" rx="28" fill="#000" />
+    </mask>
+    <path id="arco-externo" d="M138 900V90Q138 18 210 18H780Q852 18 852 90V900" />
+    <path id="arco-interior" d="M158 866V178Q158 150 186 150H802Q830 150 830 178V866" />
+  </defs>
+
+  <g mask="url(#marco-encaje)" filter="url(#sombra-encaje)">
+    <rect x="112" y="10" width="766" height="920" rx="78" fill="url(#encaje)" />
+    <use href="#arco-externo" fill="none" stroke="#d8d5c9" stroke-width="16" stroke-dasharray="0 43" stroke-linecap="round" />
+    <use href="#arco-externo" fill="none" stroke="#fffefa" stroke-width="12" stroke-dasharray="0 43" stroke-linecap="round" />
+  </g>
+
+  <use href="#arco-interior" fill="none" stroke="#c9c7bc" stroke-width="9" stroke-dasharray="0 27" stroke-linecap="round" />
+  <use href="#arco-interior" fill="none" stroke="#fffefa" stroke-width="6" stroke-dasharray="0 27" stroke-linecap="round" />
+</svg>

@@ -40,6 +40,8 @@ body {
 }
 
 .cover-art {
+  position: relative;
+  z-index: 0;
   display: block;
   width: 100%;
   height: auto;
@@ -47,6 +49,17 @@ body {
   border-radius: 2px;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+.lace-frame {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
 }
 
 .seal-button {
