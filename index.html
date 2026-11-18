@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f5ed" />
+    <meta name="description" content="Adriana y Cristian se casan. Acompáñanos a celebrar este día tan especial el 27 de febrero de 2027." />
+    <title>Adriana & Cristian · Nos casamos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tangerine:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="wordmark" href="#inicio" aria-label="Adriana y Cristian, inicio">A <span>&</span> C</a>
+      <nav aria-label="Navegación principal">
+        <a href="#historia">Nuestra historia</a>
+        <a href="#celebracion">La celebración</a>
+        <a href="#detalles">Detalles</a>
+      </nav>
+      <a class="header-date" href="#celebracion">27 · 02 · 2027</a>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> UNA HISTORIA, UN MISMO CAMINO <span></span></p>
+          <h1 id="hero-title">Nos<br /><em>casamos</em></h1>
+          <img class="ring-art" src="assets/images/anillos.png" alt="" />
+          <p class="hero-names">Adriana <span>&</span> Cristian</p>
+          <p class="hero-note">Con la bendición de Dios y de nuestras familias, queremos compartir contigo el comienzo de una nueva etapa.</p>
+          <a class="button button-gold" href="#celebracion">Acompáñanos <span aria-hidden="true">↓</span></a>
+          <div class="music-control">
+            <button class="music-button" id="music-toggle" type="button" aria-pressed="false">
+              <span class="music-icon" aria-hidden="true">♫</span>
+              <span id="music-label">Escuchar nuestra canción</span>
+            </button>
+            <span class="music-caption" id="music-status" aria-live="polite">Por toda la vida · desde 0:54</span>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="assets/images/pareja-lago.png" alt="Adriana y Cristian juntos junto al lago" fetchpriority="high" />
+          <figcaption>Dos historias, un mismo camino.</figcaption>
+        </figure>
+        <div class="hero-side-note" aria-hidden="true">27 <span>FEBRERO</span> 2027</div>
+        <audio id="wedding-song" preload="metadata" src="assets/audio/por-toda-la-vida.mp3"></audio>
+      </section>
+
+      <section class="story section" id="historia" aria-labelledby="story-title">
+        <div class="section-heading">
+          <p class="eyebrow">LO QUE NOS TRAJO HASTA AQUÍ</p>
+          <h2 id="story-title">Una vida para <em>compartir</em></h2>
+          <p>Después de recorrer juntos una historia llena de momentos, sueños y aprendizajes, queremos celebrar el comienzo de una nueva etapa rodeados de las personas que hacen parte de nuestra vida.</p>
+        </div>
+        <div class="story-gallery">
+          <figure class="gallery-photo photo-one"><img src="assets/images/pareja-arbol.png" alt="Adriana y Cristian compartiendo una sonrisa en el parque" loading="lazy" /></figure>
+          <figure class="gallery-photo photo-two"><img src="assets/images/pareja-banca.png" alt="Un momento de Adriana y Cristian en una banca del parque" loading="lazy" /></figure>
+          <p class="gallery-quote">“Nos vemos para celebrar<br />el comienzo de nuestra historia para siempre.”</p>
+        </div>
+      </section>
+
+      <section class="celebration section" id="celebracion" aria-labelledby="celebration-title">
+        <div class="celebration-top">
+          <p class="eyebrow">RESERVA ESTA FECHA</p>
+          <h2 id="celebration-title">Sábado <em>27</em> de febrero</h2>
+          <p class="year">DOS MIL VEINTISIETE</p>
+        </div>
+        <div class="countdown" aria-label="Cuenta regresiva para la boda">
+          <div><strong id="days">—</strong><span>días</span></div>
+          <div><strong id="hours">—</strong><span>horas</span></div>
+          <div><strong id="minutes">—</strong><span>minutos</span></div>
+          <div><strong id="seconds">—</strong><span>segundos</span></div>
+        </div>
+        <div class="event-grid">
+          <article class="event-card">
+            <span class="event-number">01</span>
+            <img src="assets/images/anillos.png" alt="" loading="lazy" />
+            <p class="eyebrow">CEREMONIA RELIGIOSA</p>
+            <h3>Unimos nuestras vidas</h3>
+            <p class="venue">Parroquia San Jerónimo</p>
+            <p>Cra. 72 n.º 53A–47<br />Barrio Normandía</p>
+            <p class="event-time">3:30 p. m.</p>
+            <button class="button button-outline link-placeholder" type="button" data-link="church" disabled aria-label="Ubicación de la iglesia, enlace próximamente">Ver ubicación <span>Próximamente</span></button>
+          </article>
+          <article class="event-card">
+            <span class="event-number">02</span>
+            <img src="assets/images/copas.png" alt="" loading="lazy" />
+            <p class="eyebrow">RECEPCIÓN</p>
+            <h3>Celebremos juntos</h3>
+            <p class="venue">Salón de Eventos Victoriano<br />SH Producciones</p>
+            <p>Cra. 71B n.º 52A–15</p>
+            <p class="event-time">6:00 p. m.</p>
+            <button class="button button-outline link-placeholder" type="button" data-link="reception" disabled aria-label="Ubicación del salón, enlace próximamente">Ver ubicación <span>Próximamente</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="details section" id="detalles" aria-labelledby="details-title">
+        <div class="details-copy">
+          <p class="eyebrow">UNAS NOTAS CON CARIÑO</p>
+          <h2 id="details-title">Detalles para <em>disfrutar</em></h2>
+          <div class="detail-block"><span class="detail-index">01</span><div><h3>Código de vestuario</h3><p>Formal. Queremos que esta noche sea tan especial como elegante.</p></div></div>
+          <div class="detail-block"><span class="detail-index">02</span><div><h3>Colores reservados</h3><p>Solicitamos con cariño evitar el color <strong>esmeralda</strong> en el vestuario.</p><span class="color-chip"><i></i> Esmeralda</span></div></div>
+          <div class="detail-block"><span class="detail-index">03</span><div><h3>Regalos</h3><p>Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros, agradecemos una lluvia de sobres.</p></div></div>
+        </div>
+        <div class="details-image"><img src="assets/images/ilustracion-pareja.png" alt="Ilustración de una pareja recién casada" loading="lazy" /></div>
+      </section>
+
+      <section class="rsvp section" id="confirmacion" aria-labelledby="rsvp-title">
+        <p class="eyebrow">NOS ENCANTARÍA CONTAR CONTIGO</p>
+        <h2 id="rsvp-title">Tu presencia hará este día <em>inolvidable</em></h2>
+        <p>Por favor, confirma tu asistencia. Pronto compartiremos el enlace.</p>
+        <button class="button button-light link-placeholder" type="button" data-link="rsvp" disabled aria-label="Confirmación de asistencia, enlace próximamente">Confirmar asistencia <span>Próximamente</span></button>
+        <img src="assets/images/copas.png" alt="" loading="lazy" />
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Con todo nuestro cariño,</p>
+      <p class="footer-names">Adriana <span>&</span> Cristian</p>
+      <p class="footer-date">27 · 02 · 2027</p>
+      <a href="#inicio" class="back-top">Volver al inicio ↑</a>
+    </footer>
+  </body>
+</html>
