@@ -21,6 +21,10 @@ const musicStatus = document.querySelector("#music-status");
 const progress = document.querySelector("#song-progress");
 const elapsedLabel = document.querySelector("#song-elapsed");
 const durationLabel = document.querySelector("#song-duration");
+const shuffleButton = document.querySelector("#music-shuffle");
+const backButton = document.querySelector("#music-back");
+const forwardButton = document.querySelector("#music-forward");
+const repeatButton = document.querySelector("#music-repeat");
 const startAt = 54.0;
 
 function formatTime(seconds) {
@@ -44,9 +48,13 @@ function updatePlayer() {
   const isPlaying = !song.paused && !song.ended;
   musicButton.setAttribute("aria-pressed", String(isPlaying));
   musicButton.setAttribute("aria-label", isPlaying ? "Pausar canción" : "Reproducir canción");
-  musicIcon.textContent = isPlaying ? "Ⅱ" : "▶";
+  musicIcon.innerHTML = isPlaying
+    ? '<path d="M7 5h3v14H7zM14 5h3v14h-3z"/>'
+    : '<path d="m8 5 11 7-11 7z"/>';
   if (Number.isFinite(song.duration) && song.duration > 0) {
-    progress.style.width = `${(song.currentTime / song.duration) * 100}%`;
+    progress.max = String(song.duration);
+    progress.value = String(song.currentTime);
+    progress.style.setProperty("--progress", `${(song.currentTime / song.duration) * 100}%`);
     elapsedLabel.textContent = formatTime(song.currentTime);
     durationLabel.textContent = formatTime(song.duration);
   }
@@ -100,6 +108,36 @@ musicButton.addEventListener("click", () => {
   });
 });
 
+progress.addEventListener("input", () => {
+  if (song.readyState >= HTMLMediaElement.HAVE_METADATA) {
+    song.currentTime = Number(progress.value);
+  }
+});
+
+shuffleButton.addEventListener("click", () => {
+  const active = shuffleButton.getAttribute("aria-pressed") !== "true";
+  shuffleButton.setAttribute("aria-pressed", String(active));
+  musicStatus.textContent = active
+    ? "Modo aleatorio activado · una canción"
+    : "Escucha nuestra canción";
+});
+
+backButton.addEventListener("click", () => {
+  song.currentTime = Math.max(startAt, song.currentTime - 10);
+});
+
+forwardButton.addEventListener("click", () => {
+  if (Number.isFinite(song.duration)) {
+    song.currentTime = Math.min(song.duration, song.currentTime + 10);
+  }
+});
+
+repeatButton.addEventListener("click", () => {
+  song.loop = !song.loop;
+  repeatButton.setAttribute("aria-pressed", String(song.loop));
+  musicStatus.textContent = song.loop ? "Repetición activada" : "Escucha nuestra canción";
+});
+
 const countdownTarget = Date.UTC(2027, 1, 27, 20, 30, 0);
 const countdownFields = {
   days: document.querySelector("#days"),
@@ -125,3 +163,22 @@ function updateCountdown() {
 
 updateCountdown();
 window.setInterval(updateCountdown, 1000);
+
+const petalLayer = document.createElement("div");
+petalLayer.className = "petal-layer";
+petalLayer.setAttribute("aria-hidden", "true");
+const petalColors = ["#d7e7d2", "#c5ddc6", "#dce9d8", "#b9d4bb"];
+
+for (let index = 0; index < 16; index += 1) {
+  const petal = document.createElement("span");
+  petal.className = "falling-petal";
+  petal.style.setProperty("--petal-left", `${(index * 37 + 9) % 100}%`);
+  petal.style.setProperty("--petal-width", `${8 + ((index * 7) % 7)}px`);
+  petal.style.setProperty("--petal-duration", `${12 + ((index * 5) % 9)}s`);
+  petal.style.setProperty("--petal-delay", `${-((index * 3) % 18)}s`);
+  petal.style.setProperty("--petal-drift", `${((index % 2 ? 1 : -1) * (18 + (index * 11) % 42))}px`);
+  petal.style.setProperty("--petal-color", petalColors[index % petalColors.length]);
+  petalLayer.append(petal);
+}
+
+document.body.append(petalLayer);
