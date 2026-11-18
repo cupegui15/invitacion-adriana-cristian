@@ -12,26 +12,26 @@
   --script: "Tangerine", cursive;
   font-family: var(--serif);
   color: var(--green);
-  background: #efede5;
+  background: #fff;
   scroll-behavior: smooth;
 }
 
 * { box-sizing: border-box; }
-body { min-width: 320px; margin: 0; background: #efede5; }
+body { min-width: 320px; margin: 0; background: #fff; }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
 .skip-link { position: fixed; z-index: 5; top: 1rem; left: 1rem; padding: .7rem 1rem; transform: translateY(-160%); background: white; color: var(--green); font-family: var(--sans); }
 .skip-link:focus { transform: translateY(0); }
-.invitation { width: min(100%, 470px); min-height: 100vh; margin: 0 auto; overflow: hidden; background: var(--paper); box-shadow: 0 0 36px #413b2818; text-align: center; }
+.invitation { width: min(100%, 455px); min-height: 100vh; margin: 0 auto; overflow: hidden; background: var(--paper); box-shadow: 0 0 36px #413b2818; text-align: center; }
 .cover, .date-section, .attire-section, .rsvp-section { padding-right: clamp(1.5rem, 7vw, 2.4rem); padding-left: clamp(1.5rem, 7vw, 2.4rem); }
-.cover { padding-top: 2.2rem; }
+.cover { padding-top: .55rem; }
 .eyebrow { margin: 0; color: var(--green-soft); font-family: var(--sans); font-size: .59rem; font-weight: 600; letter-spacing: .18em; line-height: 1.7; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { margin: .5rem 0 .15rem; color: var(--green); font-family: var(--script); font-size: clamp(5.3rem, 20vw, 7.2rem); font-weight: 700; line-height: .58; }
+h1 { margin: .05rem 0 .1rem; color: var(--green); font-family: var(--script); font-size: clamp(4rem, 14vw, 4.45rem); font-weight: 700; line-height: .73; }
 h1 em { font-style: normal; }
-.cover-rings { width: 82px; height: 58px; margin: .65rem auto .55rem; object-fit: contain; }
-.cover-motto { margin: 0 auto .35rem; color: var(--green); font-size: .77rem; font-style: italic; font-weight: 600; }
-.couple-names { margin: 0 0 .9rem; color: #d0a45c; font-family: var(--script); font-size: 3.25rem; font-weight: 700; line-height: .9; }
+.cover-rings { width: 72px; height: 49px; margin: .45rem auto .3rem; object-fit: contain; }
+.cover-motto { margin: 0 auto .3rem; color: var(--green); font-size: .7rem; font-style: italic; font-weight: 600; }
+.couple-names { margin: 0 0 .75rem; color: #d0a45c; font-family: var(--script); font-size: 2.75rem; font-weight: 700; line-height: .9; }
 .couple-names span, .footer-names span { color: var(--green-soft); }
 
 .music-player { position: relative; max-width: 320px; margin: 0 auto 1.2rem; padding: .75rem .95rem .5rem; display: grid; grid-template-columns: 30px 1fr; align-items: center; column-gap: .6rem; color: #78814d; font-family: var(--sans); text-align: left; }
@@ -104,7 +104,7 @@ h1 em { font-style: normal; }
 .seal { width: 95px; height: 95px; margin: .2rem auto 0; object-fit: contain; }
 
 @media (min-width: 600px) {
-  .invitation { margin-block: 2.5rem; }
+  .invitation { margin-block: 0; }
   .cover, .date-section, .attire-section, .rsvp-section { padding-right: 2.2rem; padding-left: 2.2rem; }
 }
 @media (max-width: 360px) {
