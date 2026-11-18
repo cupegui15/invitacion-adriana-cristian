@@ -3,111 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#faf8f1" />
-    <meta name="description" content="Adriana y Cristian se casan. Acompáñanos a celebrar este día tan especial el 27 de febrero de 2027." />
-    <title>Adriana & Cristian · Nos casamos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tangerine:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261118-2" />
-    <script src="script.js" defer></script>
+    <meta name="theme-color" content="#f8f7f0" />
+    <meta name="description" content="Toca el sello para abrir la invitación de Adriana y Cristian." />
+    <title>Adriana &amp; Cristian · Toca el sello</title>
+    <link rel="preload" as="image" href="assets/images/portada-sobre.jpg" />
+    <link rel="stylesheet" href="portada.css" />
+    <script src="portada.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <main class="invitation" id="contenido">
-      <section class="cover" id="inicio" aria-labelledby="hero-title">
-        <h1 id="hero-title"><span>¡Nos</span><span>Casamos!</span></h1>
-        <img class="cover-rings" src="assets/images/anillos.png" alt="" />
-        <p class="cover-motto">Dos historias, un mismo camino y un amor para toda la vida.</p>
-        <p class="couple-names">Adriana <span>&</span> Cristian</p>
-
-        <div class="music-player" aria-label="Reproductor de la canción de los novios">
-          <span class="music-heart" aria-hidden="true">♥</span>
-          <div class="music-timeline">
-            <span class="music-time" id="song-elapsed">0:54</span>
-            <input class="music-progress" id="song-progress" type="range" min="0" max="100" value="0" aria-label="Progreso de la canción" />
-            <span class="music-time" id="song-duration">--:--</span>
-          </div>
-          <div class="music-controls" aria-label="Controles de reproducción">
-            <button class="minor-control" id="music-shuffle" type="button" aria-label="Activar modo aleatorio" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3h4v4M3 17l5-5m4-4 4-4m1 0h4M3 7l5 5m4 4 4 4m1 0h4v-4"/></svg></button>
-            <button class="minor-control" id="music-back" type="button" aria-label="Retroceder diez segundos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14L8 12l11-7ZM6 5v14"/></svg></button>
-            <button class="music-button" id="music-toggle" type="button" aria-label="Reproducir canción" aria-pressed="false"><svg id="music-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg></button>
-            <button class="minor-control" id="music-forward" type="button" aria-label="Avanzar diez segundos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14l11-7L5 5Zm13 0v14"/></svg></button>
-            <button class="minor-control" id="music-repeat" type="button" aria-label="Repetir canción" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4m14-1v2a3 3 0 0 1-3 3H3"/></svg></button>
-          </div>
-          <p class="music-status" id="music-status" aria-live="polite">Escucha nuestra canción</p>
-        </div>
-        <audio id="wedding-song" preload="auto" playsinline src="assets/audio/por-toda-la-vida.mp3"></audio>
-
-        <figure class="photo photo-cover"><img src="assets/images/pareja-lago.png" alt="Adriana y Cristian juntos junto al lago" fetchpriority="high" /></figure>
-        <p class="cover-intro">Después de recorrer juntos una historia llena de momentos, sueños y aprendizajes, queremos celebrar el comienzo de una nueva etapa rodeados de las personas que hacen parte de nuestra vida.</p>
-        <img class="couple-illustration" src="assets/images/ilustracion-pareja.png" alt="" />
-      </section>
-
-      <section class="date-section" id="celebracion" aria-labelledby="date-title">
-        <p class="invitation-words">Con la bendición de Dios y de nuestras familias,<br />tenemos el agrado de invitarte a Nuestra Boda</p>
-        <p class="eyebrow date-label">RESERVA ESTA FECHA</p>
-        <p class="date-month">Febrero</p>
-        <h2 id="date-title"><span>Sábado</span><strong>27</strong><span>2027</span></h2>
-        <div class="countdown" aria-label="Cuenta regresiva para la boda">
-          <div><strong id="days">—</strong><span>días</span></div>
-          <div><strong id="hours">—</strong><span>horas</span></div>
-          <div><strong id="minutes">—</strong><span>minutos</span></div>
-          <div><strong id="seconds">—</strong><span>segundos</span></div>
-        </div>
-
-        <article class="event-card" id="iglesia">
-          <svg class="event-icon church-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4v9M28 8h8M8 27l24-13 24 13M13 27h38v30H13zM27 57V39a5 5 0 0 1 10 0v18M20 35h4m16 0h4M32 19v5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><path d="M5 58h54" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg>
-          <p class="eyebrow">CEREMONIA RELIGIOSA</p>
-          <h3>Unimos nuestras vidas</h3>
-          <p class="venue">Parroquia San Jerónimo</p>
-          <p class="address">Cra. 72 n.º 53A–47<br />Barrio Normandía</p>
-          <p class="event-time">Hora de llegada: 3:30 p. m.</p>
-          <a class="button-map" data-link="church" href="#iglesia">Ver mapa</a>
-        </article>
-
-        <article class="event-card reception-card" id="recepcion">
-          <img class="event-icon" src="assets/images/copas.png" alt="" />
-          <p class="eyebrow">RECEPCIÓN</p>
-          <h3>Celebremos juntos</h3>
-          <p class="venue">Salón de Eventos Victoriano<br />SH Producciones</p>
-          <p class="address">Cra. 71B n.º 52A–15</p>
-          <p class="event-time">Hora: 6:00 p. m.</p>
-          <a class="button-map" data-link="reception" href="#recepcion">Ver mapa</a>
-        </article>
-      </section>
-
-      <section class="attire-section" id="detalles" aria-labelledby="attire-title">
-        <figure class="photo photo-attire"><img src="assets/images/pareja-arbol.png" alt="Adriana y Cristian compartiendo una sonrisa en el parque" loading="lazy" /></figure>
-        <p class="eyebrow">UNA NOCHE PARA CELEBRAR</p>
-        <h2 id="attire-title"><em>Dress Code</em><br />Formal</h2>
-        <p class="attire-copy">Queremos que esta noche sea tan especial como elegante.</p>
-        <h3 class="script-heading">Colores reservados</h3>
-        <p class="attire-copy">Solicitamos a nuestros invitados evitar estos colores en su vestuario:</p>
-        <div class="reserved-colors" aria-label="Colores reservados: blanco, esmeralda y dorado">
-          <div class="reserved-color"><span class="swatch swatch-white"></span><p>Blanco</p></div>
-          <div class="reserved-color"><span class="swatch swatch-emerald"></span><p>Esmeralda</p></div>
-          <div class="reserved-color"><span class="swatch swatch-gold"></span><p>Dorado</p></div>
-        </div>
-
-        <div class="gift-note">
-          <h3 class="script-heading">Regalos</h3>
-          <p>Lluvia de sobres</p>
-          <svg class="envelope-icon" viewBox="0 0 72 56" aria-hidden="true"><path d="M5 13 36 3l31 10v38H5zM5 13l31 22 31-22M5 51l22-19m40 19L45 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/><path d="M36 31c-7-5-11 4 0 10 11-6 7-15 0-10Z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
-        </div>
-      </section>
-
-      <section class="rsvp-section" id="confirmacion" aria-labelledby="rsvp-title">
-        <h3 class="script-heading rsvp-heading">Confirmación de asistencia</h3>
-        <h2 id="rsvp-title" class="script-heading">¡Te esperamos!</h2>
-        <p class="rsvp-copy">Tu presencia es muy importante para nosotros.<br />Por favor confirma tu asistencia lo antes posible.</p>
-        <a class="button-confirm" data-link="rsvp" href="#confirmacion">Confirmar</a>
-        <figure class="photo photo-finale"><img src="assets/images/pareja-banca.png" alt="Adriana y Cristian compartiendo un momento en una banca del parque" loading="lazy" /></figure>
-        <p class="thank-you">Gracias por ser parte de nuestra historia.<br />Nos vemos para celebrar el comienzo de nuestro para siempre.</p>
-        <p class="with-love">Con cariño,</p>
-        <p class="footer-names">Adriana <span>&</span> Cristian</p>
-        <img class="seal" src="assets/images/sello.png" alt="Sello dorado con las iniciales A y C" loading="lazy" />
-      </section>
+    <a class="skip-link" href="invitacion.html">Saltar la animación y abrir la invitación</a>
+    <main class="entry-page">
+      <div class="cover" id="portada">
+        <img
+          class="cover-art"
+          src="assets/images/portada-sobre.jpg"
+          alt="Sobre verde de la boda de Adriana y Cristian con una fotografía y un sello dorado que dice: Toca el sello para abrir tu invitación."
+          width="990"
+          height="1400"
+          fetchpriority="high"
+          draggable="false"
+        />
+        <button class="seal-button" id="open-invitation" type="button" aria-label="Tocar el sello para abrir la invitación">
+          <span class="seal-aura" aria-hidden="true"></span>
+          <span class="seal-light" aria-hidden="true"></span>
+          <span class="seal-flash" aria-hidden="true"></span>
+        </button>
+        <p class="screen-reader-only" id="opening-status" role="status" aria-live="polite"></p>
+      </div>
     </main>
   </body>
 </html>
