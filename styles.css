@@ -29,33 +29,35 @@ a { color: inherit; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { margin: .05rem 0 .1rem; color: var(--green); font-family: var(--script); font-size: clamp(4rem, 14vw, 4.45rem); font-weight: 700; line-height: .73; }
 h1 em { font-style: normal; }
-.cover-rings { width: 72px; height: 49px; margin: .45rem auto .3rem; object-fit: contain; }
+.cover-rings { width: 100px; height: 76px; margin: .2rem auto .15rem; object-fit: contain; }
 .cover-motto { margin: 0 auto .3rem; color: var(--green); font-size: .7rem; font-style: italic; font-weight: 600; }
 .couple-names { margin: 0 0 .75rem; color: #d0a45c; font-family: var(--script); font-size: 2.75rem; font-weight: 700; line-height: .9; }
 .couple-names span, .footer-names span { color: var(--green-soft); }
 
-.music-player { position: relative; max-width: 320px; margin: 0 auto 1.2rem; padding: .75rem .95rem .5rem; display: grid; grid-template-columns: 30px 1fr; align-items: center; column-gap: .6rem; color: #78814d; font-family: var(--sans); text-align: left; }
-.music-heart { grid-row: 1 / span 2; align-self: start; padding-top: .1rem; font-size: 1.25rem; }
-.music-details { display: flex; justify-content: space-between; gap: .5rem; font-size: .62rem; }
-.music-details strong { color: var(--green); font-size: .67rem; font-weight: 600; }
-.music-details > span { color: var(--muted); }
-.music-progress { height: 2px; margin: .48rem 0 .28rem; overflow: hidden; background: #aab091; }
-.music-progress span { width: 0; height: 100%; display: block; background: var(--gold); transition: width .35s linear; }
-.music-controls { display: flex; justify-content: space-between; align-items: center; }
-.music-time { color: #78814d; font-size: .55rem; }
-.music-button { width: 35px; height: 35px; display: grid; place-items: center; border: 1.5px solid #75804d; border-radius: 50%; background: transparent; color: #75804d; cursor: pointer; font-family: var(--sans); font-size: .72rem; }
-.music-button:hover { background: #75804d; color: white; }
-.music-status { grid-column: 1 / -1; margin: .35rem 0 0; color: var(--green-soft); font-size: .55rem; letter-spacing: .16em; text-align: center; text-transform: uppercase; }
+.music-player { width: min(100%, 315px); margin: 0 auto 1.15rem; padding: .72rem .9rem .58rem; border: 1px solid #d9cfb6; border-radius: 12px; background: #fffdf8; box-shadow: 0 7px 20px #554a3012; color: #78814d; font-family: var(--sans); text-align: left; }
+.music-topline { display: grid; grid-template-columns: 38px 1fr 42px; align-items: center; gap: .7rem; }
+.music-heart { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: #edf0e4; color: #7b8455; font-size: .95rem; }
+.music-details { min-width: 0; display: grid; gap: .1rem; }
+.music-details strong { color: var(--green); font-family: var(--serif); font-size: .83rem; font-weight: 600; }
+.music-details > span { color: var(--muted); font-size: .63rem; }
+.music-button { width: 40px; height: 40px; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--green); color: white; cursor: pointer; font-family: var(--sans); font-size: .78rem; box-shadow: 0 4px 11px #0e4a3c30; transition: transform .2s, background .2s; }
+.music-button:hover { transform: scale(1.05); background: #17614e; }
+.music-timeline { margin-top: .55rem; display: grid; grid-template-columns: 34px 1fr 34px; align-items: center; gap: .45rem; }
+.music-time { color: #78814d; font-variant-numeric: tabular-nums; font-size: .58rem; }
+.music-time:last-child { text-align: right; }
+.music-progress { height: 3px; overflow: hidden; border-radius: 99px; background: #e4e2d7; }
+.music-progress span { width: 0; height: 100%; display: block; border-radius: inherit; background: var(--gold); transition: width .25s linear; }
+.music-status { margin: .5rem 0 0; color: var(--green-soft); font-size: .55rem; letter-spacing: .12em; text-align: center; text-transform: uppercase; }
 #wedding-song { display: none; }
 
 .photo { width: 100%; margin: 0 auto; }
 .photo img { width: 100%; height: auto; }
 .photo-cover { margin: .35rem auto 1rem; }
 .cover-intro { max-width: 365px; margin: 0 auto 1rem; color: #53685e; font-family: var(--sans); font-size: .82rem; line-height: 1.65; }
-.couple-illustration { width: 145px; height: 72px; margin: .2rem auto .55rem; object-fit: contain; }
+.couple-illustration { width: min(235px, 100%); height: 112px; margin: .2rem auto .65rem; object-fit: contain; }
 
 .date-section { padding-top: 1.3rem; padding-bottom: 2rem; }
-.invitation-words { margin: 0 auto 1.45rem; color: #24705c; font-family: var(--script); font-size: 2.05rem; font-weight: 700; line-height: 1.05; }
+.invitation-words { max-width: 350px; margin: 0 auto 1.45rem; color: #24705c; font-family: var(--script); font-size: 1.55rem; font-weight: 700; line-height: 1.14; }
 .date-label { color: var(--gold-dark); }
 .date-section > h2 { margin: .3rem auto 1.45rem; display: flex; justify-content: center; align-items: center; gap: .5rem; color: var(--green); font-family: var(--serif); font-size: .95rem; font-style: italic; line-height: 1.12; }
 .date-section > h2 span { padding-block: .2rem; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; }
@@ -76,7 +78,7 @@ h1 em { font-style: normal; }
 .button-map, .button-confirm { min-width: 130px; min-height: 41px; margin: 1.1rem auto 0; padding: .78rem 1.2rem; display: inline-flex; justify-content: center; align-items: center; border: 0; border-radius: 99px; background: #d3ad61; box-shadow: 0 7px 16px #b38c4733; color: #fff; font-family: var(--sans); font-size: .7rem; font-weight: 700; letter-spacing: .11em; text-decoration: none; text-transform: uppercase; transition: transform .2s, background .2s; }
 .button-map:hover, .button-confirm:hover { transform: translateY(-2px); background: #bb9449; }
 .reception-card { padding-top: .3rem; padding-bottom: 1.9rem; background: transparent; box-shadow: none; }
-.reception-card .event-icon { width: 58px; height: 62px; }
+.reception-card .event-icon { width: 78px; height: 82px; }
 
 .attire-section { padding-top: .4rem; padding-bottom: 2.5rem; }
 .photo-attire { margin: 0 auto 1.7rem; }
@@ -93,7 +95,7 @@ h1 em { font-style: normal; }
 .envelope-icon { width: 64px; height: 50px; margin: 1rem auto 0; color: #888a80; }
 
 .rsvp-section { padding-top: .5rem; padding-bottom: 2.2rem; }
-.rsvp-section > .eyebrow { color: #26715c; font-family: var(--script); font-size: 1.8rem; font-weight: 700; letter-spacing: 0; }
+.rsvp-section > .eyebrow { margin-bottom: .35rem; color: #26715c; font-family: var(--script); font-size: 1.5rem; font-weight: 700; letter-spacing: 0; line-height: 1; text-transform: none; }
 .rsvp-section > h2 { margin: .15rem 0 .35rem; color: #25705c; font-size: 2.5rem; }
 .rsvp-section > p:not(.eyebrow):not(.thank-you):not(.with-love):not(.footer-names) { margin: 0 auto; color: #326253; font-size: .76rem; line-height: 1.45; }
 .button-confirm { min-width: 110px; min-height: 36px; margin-top: .8rem; padding: .5rem 1rem; font-family: var(--script); font-size: 1.45rem; font-weight: 700; letter-spacing: 0; text-transform: none; }

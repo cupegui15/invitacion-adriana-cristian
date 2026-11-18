@@ -21,7 +21,7 @@ const musicStatus = document.querySelector("#music-status");
 const progress = document.querySelector("#song-progress");
 const elapsedLabel = document.querySelector("#song-elapsed");
 const durationLabel = document.querySelector("#song-duration");
-const startAt = 54;
+const startAt = 54.0;
 
 function formatTime(seconds) {
   if (!Number.isFinite(seconds)) return "0:00";
@@ -31,7 +31,13 @@ function formatTime(seconds) {
 }
 
 function seekToStart() {
-  if (song.currentTime < startAt || song.ended) song.currentTime = startAt;
+  if (song.ended || Math.abs(song.currentTime - startAt) > 0.05) {
+    return new Promise((resolve) => {
+      song.addEventListener("seeked", resolve, { once: true });
+      song.currentTime = startAt;
+    });
+  }
+  return Promise.resolve();
 }
 
 function updatePlayer() {
@@ -46,15 +52,17 @@ function updatePlayer() {
   }
 }
 
-function prepareSong() {
-  seekToStart();
-  updatePlayer();
-  song.play().then(() => {
-    musicStatus.textContent = "Escuchando nuestra canción";
+async function prepareSong() {
+  musicStatus.textContent = "Preparando canción desde 0:54";
+  try {
+    await seekToStart();
     updatePlayer();
-  }).catch(() => {
+    await song.play();
+    musicStatus.textContent = "Escuchando nuestra canción";
+  } catch {
     musicStatus.textContent = "Toca para escuchar desde 0:54";
-  });
+  }
+  updatePlayer();
 }
 
 if (song.readyState >= HTMLMediaElement.HAVE_METADATA) {
@@ -75,18 +83,21 @@ song.addEventListener("ended", () => {
   updatePlayer();
 });
 
-musicButton.addEventListener("click", async () => {
+musicButton.addEventListener("click", () => {
   if (!song.paused) {
     song.pause();
     return;
   }
 
-  if (song.readyState >= HTMLMediaElement.HAVE_METADATA) seekToStart();
-  try {
-    await song.play();
-  } catch {
-    musicStatus.textContent = "No fue posible reproducir la canción en este navegador.";
+  if (song.readyState < HTMLMediaElement.HAVE_METADATA) {
+    musicStatus.textContent = "Cargando canción… toca de nuevo en un momento";
+    return;
   }
+
+  if (song.ended || song.currentTime < startAt) song.currentTime = startAt;
+  song.play().catch(() => {
+    musicStatus.textContent = "No fue posible reproducir la canción en este navegador.";
+  });
 });
 
 const countdownTarget = Date.UTC(2027, 1, 27, 20, 30, 0);

@@ -22,17 +22,19 @@
         <p class="couple-names">Adriana <span>&</span> Cristian</p>
 
         <div class="music-player" aria-label="Reproductor de la canción de los novios">
-          <span class="music-heart" aria-hidden="true">♥</span>
-          <div class="music-details"><strong>Por toda la vida</strong><span>Fonseca</span></div>
-          <div class="music-progress" aria-hidden="true"><span id="song-progress"></span></div>
-          <div class="music-controls">
-            <span class="music-time" id="song-elapsed">0:54</span>
+          <div class="music-topline">
+            <span class="music-heart" aria-hidden="true">♥</span>
+            <div class="music-details"><strong>Por toda la vida</strong><span>Fonseca</span></div>
             <button class="music-button" id="music-toggle" type="button" aria-label="Reproducir canción" aria-pressed="false"><span id="music-icon" aria-hidden="true">▶</span></button>
-            <span class="music-time" id="song-duration">♪</span>
+          </div>
+          <div class="music-timeline">
+            <span class="music-time" id="song-elapsed">0:54</span>
+            <div class="music-progress" aria-hidden="true"><span id="song-progress"></span></div>
+            <span class="music-time" id="song-duration">--:--</span>
           </div>
           <p class="music-status" id="music-status" aria-live="polite">Escucha nuestra canción</p>
         </div>
-        <audio id="wedding-song" preload="metadata" src="assets/audio/por-toda-la-vida.mp3"></audio>
+        <audio id="wedding-song" preload="auto" playsinline src="assets/audio/por-toda-la-vida.mp3"></audio>
 
         <figure class="photo photo-cover"><img src="assets/images/pareja-lago.png" alt="Adriana y Cristian juntos junto al lago" fetchpriority="high" /></figure>
         <p class="cover-intro">Después de recorrer juntos una historia llena de momentos, sueños y aprendizajes, queremos celebrar el comienzo de una nueva etapa rodeados de las personas que hacen parte de nuestra vida.</p>
@@ -88,7 +90,7 @@
       </section>
 
       <section class="rsvp-section" id="confirmacion" aria-labelledby="rsvp-title">
-        <p class="eyebrow">CONFIRMACIÓN DE ASISTENCIA</p>
+        <p class="eyebrow">Confirmación de asistencia</p>
         <h2 id="rsvp-title" class="script-heading">¡Te esperamos!</h2>
         <p>Tu presencia es muy importante para nosotros.<br />Por favor confirma tu asistencia lo antes posible.</p>
         <a class="button-confirm" data-link="rsvp" href="#confirmacion">Confirmar</a>
