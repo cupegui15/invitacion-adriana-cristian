@@ -25,7 +25,7 @@ a { color: inherit; }
 .skip-link:focus { transform: translateY(0); }
 .invitation { width: min(100%, 430px); min-height: 100vh; margin: 0 auto; overflow: hidden; background: var(--paper); box-shadow: 0 0 36px #413b2818; text-align: center; }
 .cover, .date-section, .attire-section, .rsvp-section { padding-right: clamp(1.5rem, 7vw, 2.4rem); padding-left: clamp(1.5rem, 7vw, 2.4rem); }
-.cover { padding-top: 1.5rem; }
+.cover { padding-top: 2.5rem; }
 .eyebrow { margin: 0; color: var(--green-soft); font-family: var(--sans); font-size: .59rem; font-weight: 600; letter-spacing: .18em; line-height: 1.7; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { margin: .1rem 0 .35rem; display: grid; color: var(--green); font-family: var(--display); font-size: clamp(3.6rem, 13vw, 4.35rem); font-weight: 400; letter-spacing: 0; line-height: .78; }
