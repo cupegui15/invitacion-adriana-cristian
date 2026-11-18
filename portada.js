@@ -15,8 +15,8 @@
 
     sealButton.disabled = true;
     sealButton.classList.add("is-opening");
-    sealButton.setAttribute("aria-label", "La luz completa el giro; abriendo la invitación");
-    status.textContent = "El sello se ilumina. Abriendo la invitación.";
+    sealButton.setAttribute("aria-label", "La luz recorre el sello dos veces; abriendo la invitación");
+    status.textContent = "El sello se ilumina con dos vueltas de luz. Abriendo la invitación.";
 
     const sweep = sealButton.querySelector(".seal-light");
     sweep.addEventListener("animationend", (event) => {
@@ -24,6 +24,6 @@
     }, { once: true });
 
     // Fallback in case a browser does not dispatch animationend.
-    window.setTimeout(openInvitation, 2300);
+    window.setTimeout(openInvitation, 3500);
   });
 })();
