@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --paper: #faf8f1;
-  --green: #0e4a3c;
-  --green-soft: #527365;
-  --gold: #caa253;
-  --gold-dark: #b68938;
+  --paper: #fbf8ef;
+  --green: #104b3d;
+  --green-soft: #557362;
+  --gold: #cba45e;
+  --gold-dark: #b48a45;
   --ink: #31362f;
   --muted: #77766a;
   --serif: "Playfair Display", Georgia, serif;
-  --display: "Bodoni Moda", "Playfair Display", Georgia, serif;
+  --display: "Great Vibes", "Tangerine", cursive;
   --sans: "DM Sans", Arial, sans-serif;
   --script: "Tangerine", cursive;
   font-family: var(--serif);
@@ -23,16 +23,16 @@ img { display: block; max-width: 100%; }
 a { color: inherit; }
 .skip-link { position: fixed; z-index: 5; top: 1rem; left: 1rem; padding: .7rem 1rem; transform: translateY(-160%); background: white; color: var(--green); font-family: var(--sans); }
 .skip-link:focus { transform: translateY(0); }
-.invitation { width: min(100%, 455px); min-height: 100vh; margin: 0 auto; overflow: hidden; background: var(--paper); box-shadow: 0 0 36px #413b2818; text-align: center; }
+.invitation { width: min(100%, 430px); min-height: 100vh; margin: 0 auto; overflow: hidden; background: var(--paper); box-shadow: 0 0 36px #413b2818; text-align: center; }
 .cover, .date-section, .attire-section, .rsvp-section { padding-right: clamp(1.5rem, 7vw, 2.4rem); padding-left: clamp(1.5rem, 7vw, 2.4rem); }
 .cover { padding-top: .55rem; }
 .eyebrow { margin: 0; color: var(--green-soft); font-family: var(--sans); font-size: .59rem; font-weight: 600; letter-spacing: .18em; line-height: 1.7; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { margin: .3rem 0 .45rem; display: grid; color: var(--green); font-family: var(--display); font-size: clamp(3.35rem, 12vw, 4.2rem); font-weight: 400; letter-spacing: -.045em; line-height: .98; }
+h1 { margin: .1rem 0 .35rem; display: grid; color: var(--green); font-family: var(--display); font-size: clamp(3.6rem, 13vw, 4.35rem); font-weight: 400; letter-spacing: 0; line-height: .78; }
 h1 span { display: block; }
 .cover-rings { width: 100px; height: 76px; margin: .2rem auto .15rem; object-fit: contain; }
 .cover-motto { margin: 0 auto .35rem; color: var(--green); font-family: var(--serif); font-size: .76rem; font-style: italic; font-weight: 400; }
-.couple-names { margin: 0 0 .55rem; color: #d0a45c; font-family: var(--display); font-size: clamp(2.45rem, 9vw, 3rem); font-style: italic; font-weight: 400; line-height: 1.04; white-space: nowrap; }
+.couple-names { margin: 0 0 .55rem; color: #d0a45c; font-family: var(--serif); font-size: clamp(2rem, 7.5vw, 2.45rem); font-style: italic; font-weight: 400; line-height: 1.05; white-space: nowrap; }
 .couple-names span, .footer-names span { color: var(--green-soft); }
 
 .music-player { position: relative; width: min(100%, 350px); margin: .2rem auto 1.1rem; padding: 1.15rem .35rem .25rem; color: #6e7b53; font-family: var(--sans); }
