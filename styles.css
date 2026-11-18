@@ -104,7 +104,7 @@ h1 span { display: block; }
 .envelope-icon { width: 64px; height: 50px; margin: 1rem auto 0; color: #888a80; }
 
 .rsvp-section { padding-top: .5rem; padding-bottom: 2.2rem; }
-.rsvp-section > .eyebrow { margin-bottom: .35rem; color: #26715c; font-family: var(--script); font-size: 1.5rem; font-weight: 700; letter-spacing: 0; line-height: 1; text-transform: none; }
+.rsvp-section > .rsvp-heading { margin-top: 0; }
 .rsvp-section > h2 { margin: .15rem 0 .35rem; color: #25705c; font-size: 2.5rem; }
 .rsvp-section > p:not(.eyebrow):not(.thank-you):not(.with-love):not(.footer-names) { margin: 0 auto; color: #326253; font-size: .76rem; line-height: 1.45; }
 .button-confirm { min-width: 110px; min-height: 36px; margin-top: .8rem; padding: .5rem 1rem; font-family: var(--script); font-size: 1.45rem; font-weight: 700; letter-spacing: 0; text-transform: none; }
