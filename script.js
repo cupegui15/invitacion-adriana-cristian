@@ -25,7 +25,7 @@ const shuffleButton = document.querySelector("#music-shuffle");
 const backButton = document.querySelector("#music-back");
 const forwardButton = document.querySelector("#music-forward");
 const repeatButton = document.querySelector("#music-repeat");
-const startAt = 54.0;
+const startAt = 52.0;
 
 function formatTime(seconds) {
   if (!Number.isFinite(seconds)) return "0:00";
@@ -61,14 +61,14 @@ function updatePlayer() {
 }
 
 async function prepareSong() {
-  musicStatus.textContent = "Preparando canción desde 0:54";
+  musicStatus.textContent = "Preparando canción desde 0:52";
   try {
     await seekToStart();
     updatePlayer();
     await song.play();
     musicStatus.textContent = "Escuchando nuestra canción";
   } catch {
-    musicStatus.textContent = "Toca para escuchar desde 0:54";
+    musicStatus.textContent = "Toca para escuchar desde 0:52";
   }
   updatePlayer();
 }
