@@ -71,6 +71,7 @@ h1 span { display: block; }
 .countdown div:last-child { border: 0; }
 .countdown strong { color: #527b46; font-family: var(--serif); font-size: 1.55rem; font-weight: 400; }
 .countdown span { color: #67815b; font-family: var(--sans); font-size: .42rem; text-transform: uppercase; }
+.photo-countdown { margin: 1.2rem auto 1.8rem; }
 .event-card { margin: 0 auto; padding: 1.3rem .8rem 1.65rem; background: var(--paper); box-shadow: none; }
 #iglesia { background: var(--paper); box-shadow: none; }
 .event-icon { width: 68px; height: 66px; margin: 0 auto .2rem; object-fit: contain; }
@@ -89,9 +90,9 @@ h1 span { display: block; }
 .photo-attire { margin: 0 auto 1.7rem; }
 .attire-section > .eyebrow { color: #c28e3c; }
 .attire-section > h2 { margin: .45rem 0 .4rem; color: var(--green); font-family: var(--serif); font-size: 1.8rem; font-weight: 500; line-height: 1.05; }
-.attire-section > h2 em { color: #c28e3c; font-family: var(--script); font-size: 3.4rem; font-weight: 400; }
+.attire-section > h2 em { color: #c28e3c; font-family: var(--script); font-size: 2.9rem; font-weight: 400; }
 .attire-copy { margin: .55rem auto; color: #305348; font-size: .78rem; line-height: 1.5; }
-.script-heading { margin: 1.05rem 0 .35rem; color: #c28e3c; font-family: var(--script); font-size: 3rem; font-weight: 700; line-height: .9; }
+.script-heading { margin: 1.05rem 0 .35rem; color: #c28e3c; font-family: var(--script); font-size: 2.9rem; font-weight: 700; line-height: .9; }
 .reserved-colors { max-width: 330px; margin: 1rem auto 2.2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; }
 .reserved-color { margin: 0; display: grid; justify-items: center; gap: .45rem; }
 .swatch { width: 42px; height: 42px; border: 2px solid var(--green); border-radius: 50%; box-shadow: inset 0 0 0 3px var(--paper); }
@@ -105,7 +106,6 @@ h1 span { display: block; }
 
 .rsvp-section { padding-top: .5rem; padding-bottom: 2.2rem; }
 .rsvp-section > .rsvp-heading { margin-top: 0; }
-.rsvp-section > h2 { margin: .15rem 0 .35rem; color: #25705c; font-size: 2.5rem; }
 .rsvp-section > .rsvp-copy { margin: 0 auto; color: #326253; font-family: var(--serif); font-size: .76rem; line-height: 1.45; }
 .button-confirm { min-width: 110px; min-height: 36px; margin-top: .8rem; padding: .5rem 1rem; font-family: var(--script); font-size: 1.45rem; font-weight: 700; letter-spacing: 0; text-transform: none; }
 .photo-finale { margin: 1.4rem auto 1.5rem; }
