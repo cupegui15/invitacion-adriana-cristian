@@ -115,7 +115,7 @@ h1 span { display: block; }
 .photo-finale { margin: 1.4rem auto 1.5rem; }
 .thank-you { margin: 0 auto .45rem; color: #21705a; font-family: var(--script); font-size: 1.7rem; font-weight: 700; line-height: 1.05; }
 .thank-you-followup { margin: .8rem auto .45rem; color: #21705a; font-family: var(--script); font-size: 1.7rem; font-weight: 700; line-height: 1.05; }
-.with-love { margin: .7rem 0 0; color: #23715b; font-family: var(--script); font-size: 1.55rem; }
+.with-love { margin: .7rem 0 0; color: #21705a; font-family: var(--script); font-size: 1.7rem; font-weight: 700; }
 .footer-names { margin: -.1rem 0 .1rem; color: #145340; font-family: var(--script); font-size: 2.45rem; font-weight: 700; }
 .seal { width: 95px; height: 95px; margin: .2rem auto 0; object-fit: contain; }
 
