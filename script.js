@@ -26,6 +26,7 @@ const backButton = document.querySelector("#music-back");
 const forwardButton = document.querySelector("#music-forward");
 const repeatButton = document.querySelector("#music-repeat");
 const startAt = 52.0;
+let userRequestedPlay = false;
 
 function formatTime(seconds) {
   if (!Number.isFinite(seconds)) return "0:00";
@@ -65,6 +66,7 @@ async function prepareSong() {
   try {
     await seekToStart();
     updatePlayer();
+    if (userRequestedPlay) return;
     await song.play();
     musicStatus.textContent = "Escuchando nuestra canción";
   } catch {
@@ -97,8 +99,12 @@ musicButton.addEventListener("click", () => {
     return;
   }
 
+  userRequestedPlay = true;
   if (song.readyState < HTMLMediaElement.HAVE_METADATA) {
-    musicStatus.textContent = "Cargando canción… toca de nuevo en un momento";
+    musicStatus.textContent = "Cargando canción desde 0:52…";
+    song.play().catch(() => {
+      musicStatus.textContent = "No fue posible reproducir la canción en este navegador.";
+    });
     return;
   }
 
