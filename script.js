@@ -47,6 +47,9 @@ function seekToStart() {
 
 function updatePlayer() {
   const isPlaying = !song.paused && !song.ended;
+  musicStatus.textContent = isPlaying
+    ? "Escuchando nuestra canción"
+    : "Toca para escuchar nuestra canción";
   musicButton.setAttribute("aria-pressed", String(isPlaying));
   musicButton.setAttribute("aria-label", isPlaying ? "Pausar canción" : "Reproducir canción");
   musicIcon.innerHTML = isPlaying
@@ -62,15 +65,13 @@ function updatePlayer() {
 }
 
 async function prepareSong() {
-  musicStatus.textContent = "Preparando canción desde 0:52";
   try {
     await seekToStart();
     updatePlayer();
     if (userRequestedPlay) return;
     await song.play();
-    musicStatus.textContent = "Escuchando nuestra canción";
   } catch {
-    musicStatus.textContent = "Toca para escuchar nuestra canción";
+    updatePlayer();
   }
   updatePlayer();
 }
@@ -82,16 +83,12 @@ if (song.readyState >= HTMLMediaElement.HAVE_METADATA) {
 }
 
 song.addEventListener("play", () => {
-  musicStatus.textContent = "Escuchando nuestra canción";
   updatePlayer();
 });
 song.addEventListener("pause", updatePlayer);
 song.addEventListener("timeupdate", updatePlayer);
 song.addEventListener("durationchange", updatePlayer);
-song.addEventListener("ended", () => {
-  musicStatus.textContent = "La canción terminó · toca para volver a escuchar";
-  updatePlayer();
-});
+song.addEventListener("ended", updatePlayer);
 
 musicButton.addEventListener("click", () => {
   if (!song.paused) {
@@ -101,16 +98,15 @@ musicButton.addEventListener("click", () => {
 
   userRequestedPlay = true;
   if (song.readyState < HTMLMediaElement.HAVE_METADATA) {
-    musicStatus.textContent = "Cargando canción desde 0:52…";
     song.play().catch(() => {
-      musicStatus.textContent = "No fue posible reproducir la canción en este navegador.";
+      updatePlayer();
     });
     return;
   }
 
   if (song.ended || song.currentTime < startAt) song.currentTime = startAt;
   song.play().catch(() => {
-    musicStatus.textContent = "No fue posible reproducir la canción en este navegador.";
+    updatePlayer();
   });
 });
 
@@ -123,9 +119,6 @@ progress.addEventListener("input", () => {
 shuffleButton.addEventListener("click", () => {
   const active = shuffleButton.getAttribute("aria-pressed") !== "true";
   shuffleButton.setAttribute("aria-pressed", String(active));
-  musicStatus.textContent = active
-    ? "Modo aleatorio activado · una canción"
-    : "Escucha nuestra canción";
 });
 
 backButton.addEventListener("click", () => {
@@ -141,7 +134,6 @@ forwardButton.addEventListener("click", () => {
 repeatButton.addEventListener("click", () => {
   song.loop = !song.loop;
   repeatButton.setAttribute("aria-pressed", String(song.loop));
-  musicStatus.textContent = song.loop ? "Repetición activada" : "Escucha nuestra canción";
 });
 
 const countdownTarget = Date.UTC(2027, 1, 27, 20, 30, 0);
