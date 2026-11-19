@@ -66,7 +66,10 @@ h1 span { display: block; }
 .date-month { margin: 0 auto .35rem; color: var(--green); font-family: var(--serif); font-size: .95rem; font-weight: 500; text-transform: uppercase; }
 .date-section > .date-month:not(.countdown-label) { margin-bottom: .8rem; color: var(--ink); }
 .date-section > h2 { width: min(100%, 370px); margin: 0 auto 2rem; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(.55rem, 3vw, 1rem); color: var(--date-olive); font-family: var(--serif); line-height: 1.12; }
-.date-section > h2 span { min-width: 0; min-height: 3.4rem; padding: .4rem 0; display: flex; justify-content: center; align-items: center; border-top: 2px solid var(--date-olive); border-bottom: 2px solid var(--date-olive); color: var(--ink); font-size: .95rem; font-style: normal; }
+.date-section > h2 span { position: relative; min-width: 0; min-height: 2.7rem; padding: 0; display: flex; justify-content: center; align-items: center; border: 0; color: var(--ink); font-size: .95rem; font-style: normal; }
+.date-section > h2 span::before, .date-section > h2 span::after { position: absolute; right: 0; left: 0; height: 2px; background: var(--date-olive); content: ""; }
+.date-section > h2 span::before { top: 0; }
+.date-section > h2 span::after { bottom: 0; }
 .date-section > h2 strong { color: var(--date-olive); font-size: 3.25rem; font-weight: 400; line-height: 1; }
 .date-section > .countdown-label { margin: 1.7rem auto .15rem; color: var(--date-olive); font-family: "Great Vibes", cursive; font-size: 2.45rem; font-weight: 400; letter-spacing: 0; line-height: 1; text-transform: none; }
 .countdown { max-width: 325px; margin: 0 auto 1.8rem; padding: .45rem .2rem .3rem; display: grid; grid-template-columns: repeat(4, 1fr); background: transparent; }
@@ -97,7 +100,7 @@ h1 span { display: block; }
 .attire-section > h2 em { color: #c28e3c; font-family: var(--script); font-size: 2.9rem; font-weight: 700; }
 .attire-formal { display: block; margin-top: .15rem; font-size: 1.45rem; }
 .attire-icon { display: block; width: 106px; height: 92px; margin: .15rem auto .1rem; object-fit: contain; mix-blend-mode: multiply; }
-.attire-copy { margin: .55rem auto; color: #305348; font-size: .78rem; line-height: 1.5; }
+.attire-copy { margin: .55rem auto; color: #305348; font-size: 1rem; line-height: 1.5; }
 .script-heading { margin: 1.05rem 0 .35rem; color: #c28e3c; font-family: var(--script); font-size: 2.9rem; font-weight: 700; line-height: .9; }
 .reserved-colors { max-width: 330px; margin: 1rem auto 2.2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; }
 .reserved-color { margin: 0; display: grid; justify-items: center; gap: .45rem; }
