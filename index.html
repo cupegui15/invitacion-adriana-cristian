@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
     <link rel="preload" as="image" href="assets/images/portada-sobre-arandelas.jpg" />
     <link rel="preload" as="image" href="assets/images/sello.png" />
-    <link rel="stylesheet" href="portada.css?v=20261119-portada-3" />
-    <script src="portada.js?v=apertura-3" defer></script>
+    <link rel="preload" as="image" href="assets/images/foto-portada-optimizada.jpeg" fetchpriority="high" />
+    <link rel="stylesheet" href="portada.css?v=20261119-portada-4" />
+    <script src="portada.js?v=apertura-4" defer></script>
   </head>
   <body>
     <a class="skip-link" href="invitacion.html">Saltar la animación y abrir la invitación</a>
@@ -27,7 +28,6 @@
           fetchpriority="high"
           draggable="false"
         />
-        <div class="cover-photo-zoom" aria-hidden="true"></div>
         <div class="cover-title-patch" aria-hidden="true"><span>Nuestra</span><span>Boda</span></div>
         <svg class="envelope-foliage" viewBox="0 0 990 1400" preserveAspectRatio="none" aria-hidden="true">
           <defs>
@@ -87,6 +87,9 @@
             </g>
           </g>
         </svg>
+        <figure class="cover-photo-card">
+          <img src="assets/images/foto-portada-optimizada.jpeg" alt="Adriana y Cristian abrazados bajo el follaje" width="1200" height="1800" fetchpriority="high" draggable="false" />
+        </figure>
         <button class="seal-button" id="open-invitation" type="button" aria-label="Tocar el sello para abrir la invitación">
           <img class="seal-image" src="assets/images/sello.png" alt="" aria-hidden="true" draggable="false" />
           <span class="seal-light" aria-hidden="true"></span>
