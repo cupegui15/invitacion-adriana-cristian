@@ -71,11 +71,7 @@ h1 span { display: block; }
 .countdown div:last-child { border: 0; }
 .countdown strong { color: #527b46; font-family: var(--serif); font-size: 1.55rem; font-weight: 400; }
 .countdown span { color: #67815b; font-family: var(--sans); font-size: .42rem; text-transform: uppercase; }
-.photo-countdown { position: relative; margin: 1.2rem auto 1.8rem; padding: 9px 5px 14px; background: linear-gradient(180deg, #f8f4ea, #f0e9da); filter: drop-shadow(0 3px 3px rgb(45 49 37 / 12%)); }
-.photo-countdown::before, .photo-countdown::after { position: absolute; z-index: 1; right: 0; left: 0; content: ""; background: linear-gradient(180deg, #faf7ef, #f3eddf); pointer-events: none; }
-.photo-countdown::before { top: 0; height: 23px; clip-path: polygon(0 0, 100% 0, 100% 50%, 96% 38%, 92% 73%, 87% 40%, 83% 64%, 78% 32%, 73% 70%, 68% 41%, 63% 77%, 58% 36%, 53% 64%, 48% 30%, 43% 72%, 38% 40%, 33% 75%, 28% 35%, 23% 66%, 18% 34%, 13% 72%, 8% 39%, 4% 64%, 0 42%); }
-.photo-countdown::after { bottom: 0; height: 27px; clip-path: polygon(0 48%, 5% 68%, 10% 35%, 15% 70%, 20% 39%, 25% 73%, 30% 32%, 35% 67%, 40% 34%, 45% 76%, 50% 40%, 55% 68%, 60% 33%, 65% 74%, 70% 38%, 75% 69%, 80% 34%, 85% 75%, 90% 36%, 95% 67%, 100% 42%, 100% 100%, 0 100%); }
-.photo-countdown img { display: block; width: 100%; height: auto; clip-path: polygon(0 5%, 4% 3%, 8% 6%, 12% 2%, 17% 5%, 22% 2%, 27% 6%, 32% 3%, 37% 6%, 42% 2%, 47% 5%, 52% 2%, 57% 6%, 62% 3%, 67% 5%, 72% 2%, 77% 6%, 82% 3%, 87% 6%, 92% 2%, 97% 5%, 100% 3%, 100% 95%, 96% 97%, 92% 94%, 87% 98%, 82% 95%, 77% 98%, 72% 94%, 67% 97%, 62% 94%, 57% 98%, 52% 95%, 47% 98%, 42% 94%, 37% 97%, 32% 94%, 27% 98%, 22% 95%, 17% 97%, 12% 94%, 7% 98%, 3% 95%, 0 97%); }
+.photo-countdown { margin: 1.2rem auto 1.8rem; }
 .event-card { margin: 0 auto; padding: 1.3rem .8rem 1.65rem; background: var(--paper); box-shadow: none; }
 #iglesia { background: var(--paper); box-shadow: none; }
 .event-icon { width: 68px; height: 66px; margin: 0 auto .2rem; object-fit: contain; }
