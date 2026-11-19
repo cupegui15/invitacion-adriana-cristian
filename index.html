@@ -6,8 +6,11 @@
     <meta name="theme-color" content="#f8f7f0" />
     <meta name="description" content="Toca el sello para abrir la invitación de Adriana y Cristian." />
     <title>Adriana &amp; Cristian · Toca el sello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
     <link rel="preload" as="image" href="assets/images/portada-sobre-arandelas.jpg" />
-    <link rel="stylesheet" href="portada.css?v=giro1" />
+    <link rel="stylesheet" href="portada.css?v=sobrebotanico1" />
     <script src="portada.js?v=giro1" defer></script>
   </head>
   <body>
@@ -17,12 +20,40 @@
         <img
           class="cover-art"
           src="assets/images/portada-sobre-arandelas.jpg"
-          alt="Portada de boda con arandelas de encaje, fotografía de la pareja y sobre verde con sello dorado."
+          alt="Sobre verde botánico con una invitación de encaje, la fotografía de Adriana y Cristian y un sello dorado."
           width="990"
           height="1400"
           fetchpriority="high"
           draggable="false"
         />
+        <div class="cover-title-patch" aria-hidden="true"><span>Nuestra</span><span>Boda</span></div>
+        <svg class="envelope-foliage" viewBox="0 0 990 1400" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <pattern id="botanical-print" width="150" height="190" patternUnits="userSpaceOnUse">
+              <path d="M12 188C53 144 64 80 137 12" fill="none" stroke="#c1bd91" stroke-opacity=".55" stroke-width="2"/>
+              <g fill="#9cab7e" fill-opacity=".62" stroke="#d0c99c" stroke-opacity=".55" stroke-width="1">
+                <path d="M48 149C20 150 9 137 12 120c20-3 34 7 36 29ZM54 138c4-24 20-34 37-30-1 21-14 32-37 30ZM79 97C54 94 45 80 51 64c19 1 31 13 28 33ZM87 83c8-22 24-27 39-19-5 18-19 26-39 19ZM111 48c-22-4-29-18-21-33 18 3 28 15 21 33Z"/>
+                <path d="M35 166c-8-20-22-25-34-17 5 15 17 21 34 17ZM68 119c-7-19-21-24-33-16 5 15 17 21 33 16ZM100 67c-5-19-18-25-31-19 4 16 15 22 31 19Z" fill="#c3bd8b" fill-opacity=".68"/>
+              </g>
+              <g fill="#eee6c9" fill-opacity=".75">
+                <circle cx="29" cy="83" r="3"/><circle cx="33" cy="77" r="2.2"/><circle cx="24" cy="76" r="2.2"/>
+                <circle cx="123" cy="132" r="3"/><circle cx="128" cy="126" r="2.2"/><circle cx="118" cy="125" r="2.2"/>
+              </g>
+            </pattern>
+            <clipPath id="envelope-print-area">
+              <path d="M42 735 185 755 390 920 390 1340H42Z"/>
+              <path d="M948 735 805 755 600 920 600 1340H948Z"/>
+              <path d="M42 965H948V1340H42Z"/>
+            </clipPath>
+            <mask id="keep-photo-clear" maskUnits="userSpaceOnUse" x="0" y="0" width="990" height="1400">
+              <rect width="990" height="1400" fill="#fff"/>
+              <path d="M160 580 665 510 755 895 218 985Z" fill="#000"/>
+            </mask>
+          </defs>
+          <g clip-path="url(#envelope-print-area)" mask="url(#keep-photo-clear)" opacity=".76">
+            <rect x="35" y="720" width="920" height="630" fill="url(#botanical-print)"/>
+          </g>
+        </svg>
         <button class="seal-button" id="open-invitation" type="button" aria-label="Tocar el sello para abrir la invitación">
           <span class="seal-light" aria-hidden="true"></span>
         </button>
