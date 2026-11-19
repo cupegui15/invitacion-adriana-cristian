@@ -71,7 +71,11 @@ h1 span { display: block; }
 .countdown div:last-child { border: 0; }
 .countdown strong { color: #527b46; font-family: var(--serif); font-size: 1.55rem; font-weight: 400; }
 .countdown span { color: #67815b; font-family: var(--sans); font-size: .42rem; text-transform: uppercase; }
-.photo-countdown { margin: 1.2rem auto 1.8rem; padding: .35rem .4rem .5rem; background: #f7f1e6; clip-path: polygon(0 2%, 5% 1%, 10% 2%, 15% 0, 20% 1%, 25% 0, 30% 2%, 35% 1%, 40% 2%, 45% 0, 50% 1%, 55% 0, 60% 2%, 65% 1%, 70% 2%, 75% 0, 80% 1%, 85% 0, 90% 2%, 95% 1%, 100% 2%, 99% 12%, 100% 24%, 99% 36%, 100% 48%, 99% 60%, 100% 72%, 99% 84%, 100% 96%, 95% 99%, 90% 98%, 85% 100%, 80% 98%, 75% 100%, 70% 98%, 65% 99%, 60% 98%, 55% 100%, 50% 98%, 45% 100%, 40% 98%, 35% 99%, 30% 98%, 25% 100%, 20% 98%, 15% 100%, 10% 98%, 5% 99%, 0 97%, 1% 86%, 0 74%, 1% 62%, 0 50%, 1% 38%, 0 26%, 1% 14%); filter: drop-shadow(0 3px 3px rgb(45 49 37 / 12%)); }
+.photo-countdown { position: relative; margin: 1.2rem auto 1.8rem; padding: 9px 5px 14px; background: linear-gradient(180deg, #f8f4ea, #f0e9da); filter: drop-shadow(0 3px 3px rgb(45 49 37 / 12%)); }
+.photo-countdown::before, .photo-countdown::after { position: absolute; z-index: 1; right: 0; left: 0; content: ""; background: linear-gradient(180deg, #faf7ef, #f3eddf); pointer-events: none; }
+.photo-countdown::before { top: 0; height: 16px; clip-path: polygon(0 0, 100% 0, 100% 52%, 96% 42%, 92% 64%, 87% 44%, 83% 59%, 78% 36%, 73% 62%, 68% 43%, 63% 68%, 58% 42%, 53% 58%, 48% 38%, 43% 63%, 38% 43%, 33% 66%, 28% 42%, 23% 61%, 18% 39%, 13% 60%, 8% 43%, 4% 58%, 0 45%); }
+.photo-countdown::after { bottom: 0; height: 21px; clip-path: polygon(0 40%, 5% 53%, 10% 36%, 15% 61%, 20% 43%, 25% 64%, 30% 39%, 35% 58%, 40% 35%, 45% 65%, 50% 42%, 55% 60%, 60% 37%, 65% 63%, 70% 42%, 75% 61%, 80% 39%, 85% 65%, 90% 40%, 95% 58%, 100% 43%, 100% 100%, 0 100%); }
+.photo-countdown img { display: block; width: 100%; height: auto; }
 .event-card { margin: 0 auto; padding: 1.3rem .8rem 1.65rem; background: var(--paper); box-shadow: none; }
 #iglesia { background: var(--paper); box-shadow: none; }
 .event-icon { width: 68px; height: 66px; margin: 0 auto .2rem; object-fit: contain; }
@@ -91,8 +95,8 @@ h1 span { display: block; }
 .attire-section > .eyebrow { color: #c28e3c; }
 .attire-section > h2 { margin: .45rem 0 .4rem; color: var(--green); font-family: var(--serif); font-size: 1.8rem; font-weight: 500; line-height: 1.05; }
 .attire-section > h2 em { color: #c28e3c; font-family: var(--script); font-size: 2.9rem; font-weight: 400; }
-.attire-formal { display: block; margin-top: .15rem; font-size: 1.65rem; }
-.attire-icon { display: block; width: 96px; height: 66px; margin: .15rem auto .1rem; }
+.attire-formal { display: block; margin-top: .15rem; font-size: 1.45rem; }
+.attire-icon { display: block; width: 106px; height: 92px; margin: .15rem auto .1rem; object-fit: contain; mix-blend-mode: multiply; }
 .attire-copy { margin: .55rem auto; color: #305348; font-size: .78rem; line-height: 1.5; }
 .script-heading { margin: 1.05rem 0 .35rem; color: #c28e3c; font-family: var(--script); font-size: 2.9rem; font-weight: 700; line-height: .9; }
 .reserved-colors { max-width: 330px; margin: 1rem auto 2.2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; }
