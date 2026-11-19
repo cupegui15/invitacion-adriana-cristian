@@ -70,7 +70,7 @@ async function prepareSong() {
     await song.play();
     musicStatus.textContent = "Escuchando nuestra canción";
   } catch {
-    musicStatus.textContent = "Toca para escuchar desde 0:52";
+    musicStatus.textContent = "Toca para escuchar nuestra canción";
   }
   updatePlayer();
 }
