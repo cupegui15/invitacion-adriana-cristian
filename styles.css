@@ -72,7 +72,8 @@ h1 span { display: block; }
 .countdown div:last-child { border: 0; }
 .countdown strong { color: #527b46; font-family: var(--serif); font-size: 1.55rem; font-weight: 400; }
 .countdown span { color: #67815b; font-family: var(--sans); font-size: .42rem; text-transform: uppercase; }
-.event-card { margin: 0 auto; padding: 1.3rem .8rem 1.65rem; background: transparent; box-shadow: none; }
+.event-card { margin: 0 auto; padding: 1.3rem .8rem 1.65rem; background: var(--paper); box-shadow: none; }
+#iglesia { background: var(--paper); box-shadow: none; }
 .event-icon { width: 68px; height: 66px; margin: 0 auto .2rem; object-fit: contain; }
 .church-icon { padding: .1rem; color: #dcb044; }
 .event-card .eyebrow { color: var(--green); font-family: var(--serif); font-size: 1.08rem; font-weight: 600; letter-spacing: 0; }
