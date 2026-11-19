@@ -4,7 +4,7 @@
   --green: #174d3f;
   --sage: #b7cca4;
   --gold: #e6c66c;
-  --sweep-time: 2.8s;
+  --sweep-time: 1.2s;
 }
 
 * { box-sizing: border-box; }
@@ -88,26 +88,10 @@ body {
 
 .seal-button:disabled { cursor: wait; }
 
-.seal-aura,
-.seal-light,
-.seal-flash {
+.seal-light {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-}
-
-.seal-aura {
-  z-index: 0;
-  inset: -19%;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgb(255 247 213 / 0%) 42%,
-    rgb(244 218 142 / 45%) 57%,
-    rgb(207 227 183 / 28%) 67%,
-    transparent 76%
-  );
-  filter: blur(5px);
 }
 
 .seal-light {
@@ -125,34 +109,14 @@ body {
   );
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 8px), #000 calc(100% - 5px));
   mask: radial-gradient(farthest-side, transparent calc(100% - 8px), #000 calc(100% - 5px));
-  filter: drop-shadow(0 0 4px #fff8dc) drop-shadow(0 0 8px #e4c46e) drop-shadow(0 0 16px #bdcf9f);
+  filter: none;
   transform: rotate(0deg);
-  will-change: transform, opacity;
-}
-
-.seal-flash {
-  z-index: 1;
-  inset: -3%;
-  border: 1px solid rgb(255 251 223 / 85%);
-  border-radius: 50%;
-  box-shadow: 0 0 14px 5px rgb(230 198 108 / 45%), inset 0 0 13px rgb(255 248 209 / 35%);
-}
-
-.seal-button:hover:not(:disabled) .seal-flash {
-  opacity: .55;
-  transition: opacity .2s ease;
-}
-
-.seal-button.is-opening .seal-aura {
-  animation: bloom var(--sweep-time) cubic-bezier(.18,.62,.28,1) both;
+  will-change: transform;
 }
 
 .seal-button.is-opening .seal-light {
-  animation: clockwise-sweep var(--sweep-time) linear both;
-}
-
-.seal-button.is-opening .seal-flash {
-  animation: flash var(--sweep-time) ease-in-out both;
+  opacity: 1;
+  animation: seal-spin var(--sweep-time) linear both;
 }
 
 .skip-link {
@@ -187,29 +151,9 @@ body {
   border: 0;
 }
 
-@keyframes clockwise-sweep {
-  0% { transform: rotate(0deg); opacity: 0; }
-  5% { opacity: 1; }
-  48% { opacity: 1; }
-  50% { opacity: .82; }
-  53% { opacity: 1; }
-  94% { opacity: 1; }
-  100% { transform: rotate(720deg); opacity: 0; }
-}
-
-@keyframes bloom {
-  0% { transform: scale(.72); opacity: 0; }
-  12% { opacity: .92; }
-  50% { transform: scale(1.02); opacity: .62; }
-  100% { transform: scale(1.16); opacity: 0; }
-}
-
-@keyframes flash {
-  0%, 100% { transform: scale(.96); opacity: 0; }
-  10% { opacity: .9; }
-  48% { transform: scale(1.04); opacity: .48; }
-  54% { opacity: .88; }
-  82% { opacity: .32; }
+@keyframes seal-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (max-width: 420px) {
@@ -223,9 +167,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .seal-button.is-opening .seal-aura,
-  .seal-button.is-opening .seal-light,
-  .seal-button.is-opening .seal-flash {
+  .seal-button.is-opening .seal-light {
     animation-duration: .01ms !important;
   }
 }
