@@ -60,8 +60,9 @@ h1 span { display: block; }
 .couple-illustration { width: min(235px, 100%); height: 112px; margin: .2rem auto .65rem; object-fit: contain; }
 
 .date-section { padding-top: 1.3rem; padding-bottom: 2rem; }
-.invitation-words { max-width: 350px; margin: 0 auto 1.45rem; color: #24705c; font-family: "Great Vibes", cursive; font-size: 1.55rem; font-weight: 400; line-height: 1.14; }
+.invitation-words { max-width: 350px; margin: 0 auto 1.45rem; color: #53685e; font-family: "Great Vibes", cursive; font-size: 1.55rem; font-weight: 400; line-height: 1.14; }
 .date-month { margin: 0 auto .35rem; color: var(--green); font-family: var(--serif); font-size: .95rem; font-weight: 500; text-transform: uppercase; }
+.date-section > .date-month:not(.countdown-label) { color: #c28e3c; }
 .date-section > h2 { margin: 0 auto .45rem; display: flex; justify-content: center; align-items: center; gap: .5rem; color: var(--green); font-family: var(--serif); font-size: .95rem; font-style: italic; line-height: 1.12; }
 .date-section > .countdown-label { margin: 2rem auto .35rem; color: #53685e; font-family: var(--sans); font-size: 1rem; font-weight: 500; letter-spacing: .12em; }
 .date-section > h2 span { padding-block: .2rem; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; }
@@ -71,6 +72,7 @@ h1 span { display: block; }
 .countdown div:last-child { border: 0; }
 .countdown strong { color: #527b46; font-family: var(--serif); font-size: 1.55rem; font-weight: 400; }
 .countdown span { color: #67815b; font-family: var(--sans); font-size: .42rem; text-transform: uppercase; }
+.countdown div:last-child strong, .countdown div:last-child span { color: #c28e3c; }
 .photo-countdown { margin: 1.2rem auto 1.8rem; }
 .event-card { margin: 0 auto; padding: 1.3rem .8rem 1.65rem; background: var(--paper); box-shadow: none; }
 #iglesia { background: var(--paper); box-shadow: none; }
@@ -107,11 +109,12 @@ h1 span { display: block; }
 .envelope-icon { width: 64px; height: 50px; margin: 1rem auto 0; color: #888a80; }
 
 .rsvp-section { padding-top: .5rem; padding-bottom: 2.2rem; }
-.rsvp-section > .rsvp-heading { margin-top: 0; }
-.rsvp-section > .rsvp-copy { margin: 0 auto; color: #326253; font-family: var(--serif); font-size: .76rem; line-height: 1.45; }
+.rsvp-section > .rsvp-heading { margin: 0 0 1rem; }
+.rsvp-section > .rsvp-copy { margin: 0 auto 1rem; color: #326253; font-family: var(--serif); font-size: .76rem; line-height: 1.45; }
 .button-confirm { min-width: 110px; min-height: 36px; margin-top: .8rem; padding: .5rem 1rem; font-family: var(--script); font-size: 1.45rem; font-weight: 700; letter-spacing: 0; text-transform: none; }
 .photo-finale { margin: 1.4rem auto 1.5rem; }
 .thank-you { margin: 0 auto .45rem; color: #21705a; font-family: var(--script); font-size: 1.7rem; font-weight: 700; line-height: 1.05; }
+.thank-you-followup { margin: .8rem auto .45rem; color: #21705a; font-family: var(--script); font-size: 1.7rem; font-weight: 700; line-height: 1.05; }
 .with-love { margin: .7rem 0 0; color: #23715b; font-family: var(--script); font-size: 1.55rem; }
 .footer-names { margin: -.1rem 0 .1rem; color: #145340; font-family: var(--script); font-size: 2.45rem; font-weight: 700; }
 .seal { width: 95px; height: 95px; margin: .2rem auto 0; object-fit: contain; }
