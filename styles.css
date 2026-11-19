@@ -73,9 +73,9 @@ h1 span { display: block; }
 .countdown span { color: #67815b; font-family: var(--sans); font-size: .42rem; text-transform: uppercase; }
 .photo-countdown { position: relative; margin: 1.2rem auto 1.8rem; padding: 9px 5px 14px; background: linear-gradient(180deg, #f8f4ea, #f0e9da); filter: drop-shadow(0 3px 3px rgb(45 49 37 / 12%)); }
 .photo-countdown::before, .photo-countdown::after { position: absolute; z-index: 1; right: 0; left: 0; content: ""; background: linear-gradient(180deg, #faf7ef, #f3eddf); pointer-events: none; }
-.photo-countdown::before { top: 0; height: 16px; clip-path: polygon(0 0, 100% 0, 100% 52%, 96% 42%, 92% 64%, 87% 44%, 83% 59%, 78% 36%, 73% 62%, 68% 43%, 63% 68%, 58% 42%, 53% 58%, 48% 38%, 43% 63%, 38% 43%, 33% 66%, 28% 42%, 23% 61%, 18% 39%, 13% 60%, 8% 43%, 4% 58%, 0 45%); }
-.photo-countdown::after { bottom: 0; height: 21px; clip-path: polygon(0 40%, 5% 53%, 10% 36%, 15% 61%, 20% 43%, 25% 64%, 30% 39%, 35% 58%, 40% 35%, 45% 65%, 50% 42%, 55% 60%, 60% 37%, 65% 63%, 70% 42%, 75% 61%, 80% 39%, 85% 65%, 90% 40%, 95% 58%, 100% 43%, 100% 100%, 0 100%); }
-.photo-countdown img { display: block; width: 100%; height: auto; }
+.photo-countdown::before { top: 0; height: 23px; clip-path: polygon(0 0, 100% 0, 100% 50%, 96% 38%, 92% 73%, 87% 40%, 83% 64%, 78% 32%, 73% 70%, 68% 41%, 63% 77%, 58% 36%, 53% 64%, 48% 30%, 43% 72%, 38% 40%, 33% 75%, 28% 35%, 23% 66%, 18% 34%, 13% 72%, 8% 39%, 4% 64%, 0 42%); }
+.photo-countdown::after { bottom: 0; height: 27px; clip-path: polygon(0 48%, 5% 68%, 10% 35%, 15% 70%, 20% 39%, 25% 73%, 30% 32%, 35% 67%, 40% 34%, 45% 76%, 50% 40%, 55% 68%, 60% 33%, 65% 74%, 70% 38%, 75% 69%, 80% 34%, 85% 75%, 90% 36%, 95% 67%, 100% 42%, 100% 100%, 0 100%); }
+.photo-countdown img { display: block; width: 100%; height: auto; clip-path: polygon(0 5%, 4% 3%, 8% 6%, 12% 2%, 17% 5%, 22% 2%, 27% 6%, 32% 3%, 37% 6%, 42% 2%, 47% 5%, 52% 2%, 57% 6%, 62% 3%, 67% 5%, 72% 2%, 77% 6%, 82% 3%, 87% 6%, 92% 2%, 97% 5%, 100% 3%, 100% 95%, 96% 97%, 92% 94%, 87% 98%, 82% 95%, 77% 98%, 72% 94%, 67% 97%, 62% 94%, 57% 98%, 52% 95%, 47% 98%, 42% 94%, 37% 97%, 32% 94%, 27% 98%, 22% 95%, 17% 97%, 12% 94%, 7% 98%, 3% 95%, 0 97%); }
 .event-card { margin: 0 auto; padding: 1.3rem .8rem 1.65rem; background: var(--paper); box-shadow: none; }
 #iglesia { background: var(--paper); box-shadow: none; }
 .event-icon { width: 68px; height: 66px; margin: 0 auto .2rem; object-fit: contain; }
@@ -90,11 +90,11 @@ h1 span { display: block; }
 .reception-card { padding-top: .3rem; padding-bottom: 1.9rem; background: transparent; box-shadow: none; }
 .reception-card .event-icon { width: 78px; height: 82px; }
 
-.attire-section { padding-top: .4rem; padding-bottom: 1.5rem; }
+.attire-section { padding-top: .4rem; padding-bottom: .5rem; }
 .photo-attire { margin: 0 auto 1.7rem; }
 .attire-section > .eyebrow { color: #c28e3c; }
 .attire-section > h2 { margin: .45rem 0 .4rem; color: var(--green); font-family: var(--serif); font-size: 1.8rem; font-weight: 500; line-height: 1.05; }
-.attire-section > h2 em { color: #c28e3c; font-family: var(--script); font-size: 2.9rem; font-weight: 400; }
+.attire-section > h2 em { color: #c28e3c; font-family: var(--script); font-size: 2.9rem; font-weight: 700; }
 .attire-formal { display: block; margin-top: .15rem; font-size: 1.45rem; }
 .attire-icon { display: block; width: 106px; height: 92px; margin: .15rem auto .1rem; object-fit: contain; mix-blend-mode: multiply; }
 .attire-copy { margin: .55rem auto; color: #305348; font-size: .78rem; line-height: 1.5; }
