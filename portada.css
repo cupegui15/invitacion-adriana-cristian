@@ -51,6 +51,26 @@ body {
   -webkit-user-drag: none;
 }
 
+.cover-title-patch {
+  position: absolute;
+  z-index: 1;
+  top: 29%;
+  left: 29%;
+  width: 42%;
+  height: 6.5%;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgb(247 244 233 / 96%) 0 68%, rgb(247 244 233 / 78%) 84%, rgb(247 244 233 / 0%) 100%);
+  color: #174d3f;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.6rem, 6vw, 2.5rem);
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+  pointer-events: none;
+}
+
 .cover-photo-card {
   position: absolute;
   z-index: 2;
