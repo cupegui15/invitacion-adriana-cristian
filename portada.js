@@ -1,7 +1,10 @@
 (() => {
   const sealButton = document.querySelector("#open-invitation");
   const status = document.querySelector("#opening-status");
+  const cover = document.querySelector("#portada");
+  const photoCard = cover.querySelector(".cover-photo-card");
   const invitationPath = "./invitacion.html";
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let hasNavigated = false;
 
   function openInvitation() {
@@ -14,16 +17,16 @@
     if (sealButton.disabled) return;
 
     sealButton.disabled = true;
+    cover.classList.add("is-opening");
     sealButton.classList.add("is-opening");
-    sealButton.setAttribute("aria-label", "El sello gira una vez; abriendo la invitación");
-    status.textContent = "El sello gira una vez. Abriendo la invitación.";
+    sealButton.setAttribute("aria-label", "Abriendo la invitación");
+    status.textContent = "Abriendo la invitación.";
 
-    const sweep = sealButton.querySelector(".seal-light");
-    sweep.addEventListener("animationend", (event) => {
-      if (event.animationName === "seal-spin") openInvitation();
+    photoCard.addEventListener("animationend", (event) => {
+      if (event.animationName === "card-lift") openInvitation();
     }, { once: true });
 
-    // Fallback in case a browser does not dispatch animationend.
-    window.setTimeout(openInvitation, 1600);
+    // Keep navigation reliable if a browser skips animationend.
+    window.setTimeout(openInvitation, reducedMotion.matches ? 120 : 900);
   });
 })();
