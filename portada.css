@@ -54,22 +54,25 @@ body {
 .cover-title-patch {
   position: absolute;
   z-index: 1;
-  top: 29%;
+  top: 25%;
   left: 29%;
   width: 42%;
-  height: 6.5%;
+  height: 10%;
   display: grid;
-  place-items: center;
+  align-content: center;
+  justify-items: center;
   border-radius: 50%;
   background: radial-gradient(ellipse, rgb(247 244 233 / 96%) 0 68%, rgb(247 244 233 / 78%) 84%, rgb(247 244 233 / 0%) 100%);
   color: #174d3f;
   font-family: "Great Vibes", cursive;
   font-size: clamp(1.6rem, 6vw, 2.5rem);
-  line-height: 1;
+  line-height: .8;
   white-space: nowrap;
   text-align: center;
   pointer-events: none;
 }
+
+.cover-title-patch span { display: block; }
 
 .cover-photo-card {
   position: absolute;
